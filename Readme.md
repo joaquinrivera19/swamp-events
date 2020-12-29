@@ -2,9 +2,11 @@
 Service for sending real time events to the client
 
 Server sent event
-Service is using Server Sent Event for one-way communication with client. SSE mozilla web doc refrence
+Service is using Server Sent Event for one-way communication with client.
 
 Events are returned as text/event-stream
+
+[based on LINK](https://www.digitalocean.com/community/tutorials/nodejs-server-sent-events-build-realtime-app) 
 
 #### Getting started
 We will start setting up the requirements for our server. We’ll call our back-end app swamp-events:
