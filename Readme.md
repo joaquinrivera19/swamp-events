@@ -32,11 +32,26 @@ We’ll start developing the backend of our application, it will have these feat
 ```sh
 # Server execution
 $ node server.js
-Swamp Events service listening on port 8585
+Swamp Events service listening on port 3000
 ```
 
 ```sh
 # Open connection waiting updates
 $ curl  -H Accept:text/event-stream http://localhost:3000/events
 data: []
+```
+
+```sh
+# POST request to add new nest
+$ curl -X POST \
+ -H "Content-Type: application/json" \
+ -d '{"momma": "swamp_princess", "eggs": 40, "temperature": 31}'\
+ -s http://localhost:3000/nest
+{"momma": "swamp_princess", "eggs": 40, "temperature": 31}
+```
+
+```sh
+# Endpoint to know how many clients we have connected
+$ curl -H Accept:text/event-stream http://localhost:3000/status
+{"clients":1}
 ```
