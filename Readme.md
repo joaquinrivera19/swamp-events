@@ -6,7 +6,8 @@ Service is using Server Sent Event for one-way communication with client. SSE mo
 
 Events are returned as text/event-stream
 
-##### Encontrar archivos:
+#### Getting started
+We will start setting up the requirements for our server. We’ll call our back-end app swamp-events:
 
 ```sh
 
@@ -16,3 +17,12 @@ $ npm init -y
 $ npm install --save express body-parser cors
 
 ```
+
+#### SSE Express Backend
+We’ll start developing the backend of our application, it will have these features:
+
+ - Keeping track of open connections and broadcast changes when new nests are added
+ - GET /events endpoint where we’ll register for updates
+ - POST /nest endpoint for new nests
+ - GET /status endpoint to know how many clients we have connected
+ - cors middleware to allow connections from the front-end app
