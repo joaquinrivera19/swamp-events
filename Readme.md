@@ -26,3 +26,17 @@ We’ll start developing the backend of our application, it will have these feat
  - POST /nest endpoint for new nests
  - GET /status endpoint to know how many clients we have connected
  - cors middleware to allow connections from the front-end app
+
+
+
+```sh
+# Server execution
+$ node server.js
+Swamp Events service listening on port 8585
+```
+
+```sh
+# Open connection waiting updates
+$ curl  -H Accept:text/event-stream http://localhost:3000/events
+data: []
+```
